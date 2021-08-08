@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>mb_1r2t_ros</name>
+  <version>1.0.0</version>
+  <description>
+    ROS package for the MB_1r2t.
+  </description>
+  <license>BSD</license>
+  <maintainer email="bafenijn@gmail.com">Vidicon (Bram Fenijn)</maintainer>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>boost</depend>
+  <exec_depend>rviz</exec_depend>
+</package>

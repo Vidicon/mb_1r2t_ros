@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="port" default="/dev/ttyUSB0" />
+
+  <!-- run mb_1r2t_ros -->
+  <node pkg="mb_1r2t_ros" type="mb_1r2t_publisher" name="mb_1r2t_publisher" output="screen">
+    <param name="port" value="$(arg port)"/>
+    <param name="frame_id" value="laser"/>
+  </node>
+
+  <!-- run rviz to visualize the lidar data -->
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find mb_1r2t_ros)/config/view.rviz" />
+
+</launch>
