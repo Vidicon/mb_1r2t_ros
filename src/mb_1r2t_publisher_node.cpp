@@ -125,7 +125,7 @@ void scanCallback(std::vector<Vector_2d> *vectors)
   }
   
   
-  ROS_INFO("##### callback ##### size: %lu",vectors->size());
+  // ROS_INFO("##### callback ##### size: %lu",vectors->size());
   g_scan_pub.publish(scan_msg);
 }
 
