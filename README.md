@@ -16,16 +16,25 @@ $ cd ~/catkin_ws/
 $ catkin_make
 ```
 
-## How to run the driver
+## How to run the driver  
 1. Connect the lidar using a TTL serial to usb adapter
 
-2. find connected port:
+2. Get access to the serial port  
+
+To be able to use the serial port without root access you need to add the user to the dialout group:
+```
+$ sudo adduser $USER dialout
+$ reboot
+```
+This only needs to be done once  
+
+3. Find connected port:  
 ```
 $ ls /dev/tty*
 ```
-you would expect to see `/dev/ttyUSB0` or `/dev/ttyACM0` in the list
+You would expect to see `/dev/ttyUSB0` or `/dev/ttyACM0` in the list
 
-3. Launch the launch file:
+4. Launch the launch file:
 ```
 $ roslaunch mb_1r2t_ros view.launch port:=/dev/ttyUSB0
 ```
